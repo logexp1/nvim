@@ -12,20 +12,21 @@ map("n", "tj", "<C-w>j", { desc = "Go to lower window" })
 map("n", "tk", "<C-w>k", { desc = "Go to upper window" })
 map("n", "tl", "<C-w>l", { desc = "Go to right window" })
 
-map("n", "tq", "<C-w>q", { desc = "close current window" })
+map("n", "tq", ":close<CR>", { desc = "close current window", noremap = true, silent = true })
+map("n", "td", ":bdelete<CR>", { desc = "delete current window", noremap = true, silent = true })
 
 map("n", "t=", "<C-w>=", { desc = "equalize window sizes" })
 
 map("n", "t_", "<cmd>resize -5<cr>", { desc = "Decrease window height" })
 map("n", "t+", "<cmd>resize +5<cr>", { desc = "Increase window height" })
 
-map("n", "tc", "gcc", { desc = "Toggle comment line", remap = true })
-map("v", "tc", "gc", { desc = "Togle comment selection", remap = true })
+map("n", "tc", "gcc", { desc = "Toggle comment line", noremap = true })
+map("v", "tc", "gc", { desc = "Togle comment selection", noremap = true })
 
 map("i", "<Esc>", "<Esc>`^", { desc = "Exit insert mode without moving cursor" })
 map("n", "a", "A", { desc = "Append at end of line" })
 
-map("n", ";", ":", { desc = "Command mode" })
-map("v", ";", ":", { desc = "Command mode" })
+map("n", ";", ":", { desc = "Command mode", noremap = true })
+map("v", ";", ":", { desc = "Command mode", noremap = true })
 
-map("n", "U", "<C-r>", { desc = "Redo" })
+map("n", "U", "<C-r>", { desc = "Redo", noremap = true })
