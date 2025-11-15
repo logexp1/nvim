@@ -4,6 +4,10 @@
 -- Window functionality
 local map = vim.keymap.set
 
+require("which-key").add({
+  { "t", group = "+t-prefix" },
+})
+
 map("n", "t-", "<cmd>split<cr>", { desc = "Split window horizontally" })
 map("n", "t'", "<cmd>vsplit<cr>", { desc = "Split window vertically" })
 
@@ -30,3 +34,11 @@ map("n", ";", ":", { desc = "Command mode", noremap = true })
 map("v", ";", ":", { desc = "Command mode", noremap = true })
 
 map("n", "U", "<C-r>", { desc = "Redo", noremap = true })
+
+vim.keymap.set({ "n", "i", "v" }, "<C-f>", function()
+  require("snacks").picker.grep_buffers()
+end, { desc = "Grep buffers" })
+
+vim.keymap.set({ "n", "i", "v" }, "<C-b>", function()
+  vim.cmd("buffer #")
+end, { desc = "Switch to last buffer" })

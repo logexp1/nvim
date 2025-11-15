@@ -40,9 +40,9 @@ return {
       {
         "<leader>/",
         function()
-          Snacks.picker.grep()
+          Snacks.picker.git_grep()
         end,
-        desc = "search buffers",
+        desc = "grep in git preojects",
       },
       {
         "<leader>:",
@@ -59,11 +59,11 @@ return {
         desc = "Find Files",
       },
       {
-        "<leader>fg",
+        "<leader>p",
         function()
           Snacks.picker.git_files()
         end,
-        desc = "Grep",
+        desc = "find files (in projects)",
       },
       {
         "<leader>fb",
@@ -71,13 +71,6 @@ return {
           Snacks.picker.buffers()
         end,
         desc = "Buffers",
-      },
-      {
-        "<leader>fh",
-        function()
-          Snacks.picker.help()
-        end,
-        desc = "Help",
       },
       {
         "<leader>fr",
@@ -89,23 +82,9 @@ return {
       {
         "<leader>fc",
         function()
-          Snacks.picker.commands()
+          Snacks.picker.projects()
         end,
-        desc = "Commands",
-      },
-      {
-        "<leader>fk",
-        function()
-          Snacks.picker.keymaps()
-        end,
-        desc = "Keymaps",
-      },
-      {
-        "<leader>fs",
-        function()
-          Snacks.picker.git_status()
-        end,
-        desc = "Git Status",
+        desc = "change project",
       },
       {
         "<leader>:",
@@ -113,13 +92,6 @@ return {
           Snacks.picker.command_history()
         end,
         desc = "Command History",
-      },
-      {
-        "<leader>/",
-        function()
-          Snacks.picker.grep_buffers()
-        end,
-        desc = "Grep Open Buffers",
       },
     },
   },

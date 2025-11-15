@@ -1,42 +1,22 @@
 return {
   {
     "folke/flash.nvim",
-    optional = true,
-    specs = {
-      {
-        "folke/snacks.nvim",
-        opts = {
-          picker = {
-            win = {
-              input = {
-                keys = {
-                  ["<a-s>"] = { "flash", mode = { "n", "i" } }, -- Alt+s in normal or insert mode
-                  ["s"] = { "flash" }, -- s in normal mode
-                },
-              },
-            },
-            actions = {
-              flash = function(picker)
-                require("flash").jump({
-                  pattern = "^",
-                  label = { after = { 0, 0 } },
-                  search = {
-                    mode = "search",
-                    exclude = {
-                      function(win)
-                        return vim.bo[vim.api.nvim_win_get_buf(win)].filetype ~= "snacks_picker_list"
-                      end,
-                    },
-                  },
-                  action = function(match)
-                    local idx = picker.list:row2idx(match.pos[1])
-                    picker.list:_move(idx, true, true)
-                  end,
-                })
-              end,
-            },
-          },
+    event = "VeryLazy",
+    opts = {
+      modes = {
+        char = {
+          enabled = false, --disable t/f/T/F motions
         },
+      },
+    },
+    keys = {
+      {
+        "ra",
+        mode = { "n" },
+        function()
+          require("flash").jump()
+        end,
+        desc = "Flash",
       },
     },
   },

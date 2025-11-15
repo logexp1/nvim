@@ -8,7 +8,7 @@ return {
     },
     cmd = "Neogit",
     keys = {
-      { "<leader>gg", "<cmd>Neogit<cr>", desc = "show neogit UI" },
+      { "S", mode = { "n" }, "<cmd>Neogit<cr>", desc = "show neogit UI" },
     },
   },
 }
