@@ -20,8 +20,8 @@ map("n", "t=", "<C-w>=", { desc = "equalize window sizes" })
 map("n", "t_", "<cmd>resize -5<cr>", { desc = "Decrease window height" })
 map("n", "t+", "<cmd>resize +5<cr>", { desc = "Increase window height" })
 
-map("n", "tc", "gcc", { desc = "Toggle comment line", noremap = true })
-map("v", "tc", "gc", { desc = "Togle comment selection", noremap = true })
+map("n", "tc", "gcc", { desc = "Toggle comment line", remap = true })
+map("v", "tc", "gc", { desc = "Togle comment selection", remap = true })
 
 map("i", "<Esc>", "<Esc>`^", { desc = "Exit insert mode without moving cursor" })
 map("n", "a", "A", { desc = "Append at end of line" })

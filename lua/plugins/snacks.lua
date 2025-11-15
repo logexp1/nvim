@@ -24,6 +24,34 @@ return {
     },
     keys = {
       {
+        "<leader><space>",
+        function()
+          Snacks.picker.smart()
+        end,
+        desc = "Smart Find Files",
+      },
+      {
+        "<leader>,",
+        function()
+          Snacks.picker.buffers()
+        end,
+        desc = "switch to buffers",
+      },
+      {
+        "<leader>/",
+        function()
+          Snacks.picker.grep()
+        end,
+        desc = "search buffers",
+      },
+      {
+        "<leader>:",
+        function()
+          Snacks.picker.command_history()
+        end,
+        desc = "Command history",
+      },
+      {
         "<leader>ff",
         function()
           Snacks.picker.files()
@@ -33,7 +61,7 @@ return {
       {
         "<leader>fg",
         function()
-          Snacks.picker.grep()
+          Snacks.picker.git_files()
         end,
         desc = "Grep",
       },
