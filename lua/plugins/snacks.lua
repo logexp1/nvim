@@ -57,9 +57,9 @@ return {
       {
         "<leader>ff",
         function()
-          Snacks.picker.files()
+          Snacks.picker.files({ cwd = vim.fn.expand("~") })
         end,
-        desc = "Find Files",
+        desc = "Find Files from home directory",
       },
       {
         "<leader>p",

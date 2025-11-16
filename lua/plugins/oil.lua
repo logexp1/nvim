@@ -76,7 +76,11 @@ return {
         },
         keymaps = vim.tbl_extend("force", {
           ["q"] = "actions.close",
-          ["<C-CR>"] = { desc = "Open external", callback = open_external },
+          ["<CR>"] = { desc = "Open external", callback = open_external },
+          ["<S-h>"] = { "actions.parent", mode = "n" },
+          ["<S-l>"] = "actions.select",
+          ["o"] = { "actions.change_sort", mode = "n" },
+          ["?"] = { "actions.show_help", mode = "n" },
           ["x"] = { desc = "Extract archive", callback = extract_archive },
         }, bookmark_maps),
         columns = {

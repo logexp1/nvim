@@ -47,3 +47,6 @@ end, { desc = "Grep buffers" })
 vim.keymap.set({ "n", "i", "v" }, "<C-b>", function()
   vim.cmd("buffer #")
 end, { desc = "Switch to last buffer" })
+
+map("n", "<C-j>", "<C-d>", { desc = "Scroll down half page" })
+map("n", "<C-k>", "<C-u>", { desc = "Scroll up half page" })
