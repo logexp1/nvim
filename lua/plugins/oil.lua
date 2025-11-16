@@ -1,7 +1,6 @@
 return {
   {
     "stevearc/oil.nvim",
-    enabled = false,
     dependencies = { "nvim-tree/nvim-web-devicons" },
     keys = {
       { "-", "<CMD>Oil<CR>", desc = "Open parent directory" },
@@ -76,9 +75,7 @@ return {
           end,
         },
         keymaps = vim.tbl_extend("force", {
-          ["<CR>"] = "actions.select",
-          ["<S-h>"] = "actions.parent",
-          ["<S-l>"] = "actions.open_cwd",
+          ["q"] = "actions.close",
           ["<C-CR>"] = { desc = "Open external", callback = open_external },
           ["x"] = { desc = "Extract archive", callback = extract_archive },
         }, bookmark_maps),

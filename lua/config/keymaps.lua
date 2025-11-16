@@ -8,6 +8,10 @@ require("which-key").add({
   { "t", group = "+t-prefix" },
 })
 
+-- Swap q and Q for macro recording
+map("n", "q", "<Nop>", { desc = "Disabled (use Q for macros)" })
+map("n", "Q", "q", { desc = "Record macro" })
+
 map("n", "t-", "<cmd>split<cr>", { desc = "Split window horizontally" })
 map("n", "t'", "<cmd>vsplit<cr>", { desc = "Split window vertically" })
 
