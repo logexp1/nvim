@@ -22,6 +22,7 @@ return {
         },
       },
       scroll = {
+        -- conflicts with stay-centered.nvim
         enabled = true,
       },
     },

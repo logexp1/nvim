@@ -79,7 +79,7 @@ return {
           ["<CR>"] = { desc = "Open external", callback = open_external },
           ["<S-h>"] = { "actions.parent", mode = "n" },
           ["<S-l>"] = "actions.select",
-          ["o"] = { "actions.change_sort", mode = "n" },
+          ["s"] = { "actions.change_sort", mode = "n" },
           ["?"] = { "actions.show_help", mode = "n" },
           ["x"] = { desc = "Extract archive", callback = extract_archive },
         }, bookmark_maps),
