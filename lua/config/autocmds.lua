@@ -9,9 +9,16 @@
 
 -- Auto change directory to current buffer's directory
 vim.api.nvim_create_autocmd("BufEnter", {
-  pattern = "*",
   callback = function()
-    vim.cmd("lcd %:p:h")
+    -- Skip for oil buffers
+    if vim.bo.filetype == "oil" then
+      return
+    end
+
+    -- Check if the buffer has a valid file path
+    local filepath = vim.fn.expand("%:p:h")
+    if filepath ~= "" and vim.fn.isdirectory(filepath) == 1 then
+      vim.cmd("lcd " .. filepath)
+    end
   end,
-  desc = "Auto change local directory to buffer's directory",
 })
