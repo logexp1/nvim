@@ -84,7 +84,7 @@ return {
         desc = "Recent Files",
       },
       {
-        "<leader>fc",
+        "<leader>c",
         function()
           Snacks.picker.projects()
         end,

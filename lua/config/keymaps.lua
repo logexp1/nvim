@@ -50,5 +50,11 @@ end, { desc = "Switch to last buffer" })
 
 map("n", "<C-j>", "<C-d>zz", { desc = "Scroll down half page" })
 map("n", "<C-k>", "<C-u>zz", { desc = "Scroll up half page" })
+-- Insert mode에서도 스크롤 가능 (C-o로 normal mode 명령어 실행)
+map("i", "<C-j>", "<C-o><C-d>zz", { desc = "Scroll down half page" })
+map("i", "<C-k>", "<C-o><C-u>zz", { desc = "Scroll up half page" })
+map("v", "<C-j>", "<C-d>zz", { desc = "Scroll down half page" })
+map("v", "<C-k>", "<C-u>zz", { desc = "Scroll up half page" })
+
 map("n", "j", "jzz", { desc = "move cursor down" })
 map("n", "k", "kzz", { desc = "move cursor up" })
